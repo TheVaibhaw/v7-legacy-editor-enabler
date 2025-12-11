@@ -168,17 +168,10 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ```
 
-## Credits
+# Credits
 
 - **Developer:** Vaibhaw Kumar
 - **Testing:** WordPress 6.4
 - **Security Review:** Built with WordPress security best practices
-
-## Donations
-
-If you find this plugin helpful, consider supporting future development:
-
-- **PayPal:** [Donate via PayPal](https://paypal.me/vaibhawkumar)
-- **Buy Me a Coffee:** [Support on Buy Me a Coffee](https://buymeacoffee.com/vaibhawkumar)
 
 Thank you for using V7 Classic Editor Enabler!
