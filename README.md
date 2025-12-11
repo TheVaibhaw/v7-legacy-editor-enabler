@@ -82,64 +82,62 @@ Navigate to **Settings > V7 Classic Editor** to access:
 - **Classic Editor Disabled**: Modern Gutenberg block editor interface
 - **Per-Post Type Control**: Different editor for posts vs pages
 
-## Frequently Asked Questions
+# Frequently Asked Questions
 
-### How do I access the settings?
+# How do I access the settings?
 
 After activation, you're automatically redirected to settings. You can also find it under **Settings > V7 Classic Editor** in your admin menu.
 
-### Can I use both editors on the same site?
+# Can I use both editors on the same site?
 
 Yes! Enable Classic Editor for posts but keep Gutenberg for pages, or any combination that suits your workflow.
 
-### Does this affect existing content?
+# Does this affect existing content?
 
 No, existing posts and pages remain unchanged. The setting only affects the editor used for new content creation and editing.
 
-### What if I want to switch back?
+# What if I want to switch back?
 
 Simply uncheck the appropriate boxes in settings and save. Gutenberg will be restored for those post types.
 
-### Is the Classic Editor still supported?
+# Is the Classic Editor still supported?
 
 Yes, WordPress maintains the Classic Editor plugin. This plugin provides additional control over when it's used.
 
-### Can I use this with page builders?
+# Can I use this with page builders?
 
 Yes, this works with any page builder. The Classic Editor setting only affects the default WordPress editor.
 
-### Does this work with custom post types?
+# Does this work with custom post types?
 
 Yes, you can extend the plugin to support custom post types by modifying the code or using additional filters.
-
-## Screenshots
 
 1. **Settings Page** - Easy checkbox interface for configuring editor preferences
 2. **Classic Editor Interface** - Familiar editing experience when enabled
 3. **Admin Menu** - Settings accessible under Settings menu
 
-## Changelog
+# Changelog
 
-### 1.0.0
+## 1.0.0
 
 - Initial release
 - Selective Classic Editor enablement for Posts and Pages
 - Automatic redirect to settings on activation
 - Professional code structure with security best practices
 
-## Upgrade Notice
+# Upgrade Notice
 
-### 1.0.0
+## 1.0.0
 
 Initial release - no upgrade needed.
 
-## Requirements
+# Requirements
 
 - WordPress 4.9 or higher
 - PHP 5.6 or higher
 - MySQL 5.0 or higher
 
-## Support
+# Support
 
 For support, bug reports, or feature requests:
 
@@ -147,13 +145,9 @@ For support, bug reports, or feature requests:
 - **Email:** imvaibhaw@gmail.com
 - **Website:** https://vaibhawkumarparashar.in
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit pull requests or open issues on the [GitHub repository](https://github.com/vaibhawkumar/v7-classic-editor-enabler).
-
 ## License
 
-This plugin is licensed under the GPL v2 or later.
+This plugin is licensed under the GPL v3 or later.
 
 ```
 V7 Classic Editor Enabler
@@ -161,7 +155,7 @@ Copyright (C) 2025, Vaibhaw Kumar
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
+the Free Software Foundation; either version 3 of the License, or
 (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
