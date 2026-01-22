@@ -5,7 +5,7 @@
 **Requires at least:** 4.9  
 **Tested up to:** 6.4  
 **Stable tag:** 1.0.0  
-**License:** GPL v3 or later  
+**License:** GPL v3 or later 
 **License URI:** https://www.gnu.org/licenses/gpl-3.0.html
 
 A professional WordPress plugin that disables the Gutenberg block editor and enables the Classic Editor for Posts and Pages with granular control.
