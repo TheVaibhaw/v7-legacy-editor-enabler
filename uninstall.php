@@ -18,6 +18,7 @@ delete_option( 'v7_classic_editor_pages' );
 delete_option( 'v7_classic_editor_redirect' );
 
 // Delete options for multisite installations.
+// phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 if ( is_multisite() ) {
 	$v7_ce_sites = get_sites();
 	foreach ( $v7_ce_sites as $v7_ce_site ) {
@@ -28,3 +29,4 @@ if ( is_multisite() ) {
 		restore_current_blog();
 	}
 }
+// phpcs:enable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
