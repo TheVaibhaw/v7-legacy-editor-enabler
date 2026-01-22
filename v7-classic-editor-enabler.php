@@ -1,19 +1,23 @@
 <?php
-
 /**
- * Plugin Name: V7 Classic Editor Enabler
- * Plugin URI: https://vaibhawkumarparashar.in
- * Description: A plugin to disable Gutenberg block editor and enable Classic Editor for Posts and Pages based on settings.
- * Version: 1.0.0
- * Author: Vaibhaw Kumar
- * License: GPL v2 or later
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: v7-classic-editor-enabler
+ * Plugin Name:       V7 Classic Editor Enabler
+ * Description:       A plugin to disable Gutenberg block editor and enable Classic Editor for Posts and Pages based on settings.
+ * Version:           1.0.0
+ * Author:            Vaibhaw Kumar
+ * Author URI:        https://vaibhawkumarparashar.in
+ * License:           GPL-2.0-or-later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       v7-classic-editor-enabler
+ * Domain Path:       /languages
+ * Requires at least: 5.0
+ * Requires PHP:      7.4
+ *
+ * @package V7_Classic_Editor_Enabler
  */
 
-// If this file is called directly, abort.
-if (! defined('WPINC')) {
-    die;
+// Prevent direct file access.
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
 }
 
 /**

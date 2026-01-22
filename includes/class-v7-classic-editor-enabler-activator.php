@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Fired during plugin activation.
  *
@@ -10,6 +9,11 @@
  * @subpackage V7_Classic_Editor_Enabler/includes
  * @author     Vaibhaw Kumar <imvaibhaw@gmail.com>
  */
+
+// Prevent direct file access.
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 class V7_Classic_Editor_Enabler_Activator
 {
 

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The admin-specific functionality of the plugin.
  *
@@ -9,6 +8,11 @@
  * @package    V7_Classic_Editor_Enabler
  * @subpackage V7_Classic_Editor_Enabler/admin
  */
+
+// Prevent direct file access.
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 /**
  * The admin-specific functionality of the plugin.
@@ -109,11 +113,11 @@ class V7_Classic_Editor_Enabler_Admin
     public function add_settings_page()
     {
         add_options_page(
-            __('V7 Classic Editor Enabler', 'v7-classic-editor-enabler'),
-            __('V7 Classic Editor', 'v7-classic-editor-enabler'),
+            esc_html__( 'V7 Classic Editor Enabler', 'v7-classic-editor-enabler' ),
+            esc_html__( 'V7 Classic Editor', 'v7-classic-editor-enabler' ),
             'manage_options',
             'v7-classic-editor-enabler',
-            array($this, 'display_settings_page')
+            array( $this, 'display_settings_page' )
         );
     }
 
@@ -124,35 +128,52 @@ class V7_Classic_Editor_Enabler_Admin
      */
     public function register_settings()
     {
-        // Check for redirect after activation
-        if (get_option('v7_classic_editor_redirect')) {
-            delete_option('v7_classic_editor_redirect');
-            wp_redirect(admin_url('options-general.php?page=v7-classic-editor-enabler'));
+        // Check for redirect after activation (only on admin_init and for users who can manage options).
+        if ( get_option( 'v7_classic_editor_redirect' ) && current_user_can( 'manage_options' ) ) {
+            delete_option( 'v7_classic_editor_redirect' );
+            wp_safe_redirect( esc_url( admin_url( 'options-general.php?page=v7-classic-editor-enabler' ) ) );
             exit;
         }
 
-        register_setting('v7_classic_editor_options', 'v7_classic_editor_posts', array('sanitize_callback' => 'sanitize_text_field'));
-        register_setting('v7_classic_editor_options', 'v7_classic_editor_pages', array('sanitize_callback' => 'sanitize_text_field'));
+        register_setting(
+            'v7_classic_editor_options',
+            'v7_classic_editor_posts',
+            array(
+                'type'              => 'string',
+                'sanitize_callback' => 'sanitize_text_field',
+                'default'           => '1',
+            )
+        );
+
+        register_setting(
+            'v7_classic_editor_options',
+            'v7_classic_editor_pages',
+            array(
+                'type'              => 'string',
+                'sanitize_callback' => 'sanitize_text_field',
+                'default'           => '1',
+            )
+        );
 
         add_settings_section(
             'v7_classic_editor_section',
-            __('Classic Editor Settings', 'v7-classic-editor-enabler'),
-            array($this, 'settings_section_callback'),
+            esc_html__( 'Classic Editor Settings', 'v7-classic-editor-enabler' ),
+            array( $this, 'settings_section_callback' ),
             'v7_classic_editor_options'
         );
 
         add_settings_field(
             'v7_classic_editor_posts',
-            __('Enable for Posts', 'v7-classic-editor-enabler'),
-            array($this, 'posts_checkbox_callback'),
+            esc_html__( 'Enable for Posts', 'v7-classic-editor-enabler' ),
+            array( $this, 'posts_checkbox_callback' ),
             'v7_classic_editor_options',
             'v7_classic_editor_section'
         );
 
         add_settings_field(
             'v7_classic_editor_pages',
-            __('Enable for Pages', 'v7-classic-editor-enabler'),
-            array($this, 'pages_checkbox_callback'),
+            esc_html__( 'Enable for Pages', 'v7-classic-editor-enabler' ),
+            array( $this, 'pages_checkbox_callback' ),
             'v7_classic_editor_options',
             'v7_classic_editor_section'
         );
@@ -165,18 +186,22 @@ class V7_Classic_Editor_Enabler_Admin
      */
     public function display_settings_page()
     {
-?>
+        // Check user capabilities.
+        if ( ! current_user_can( 'manage_options' ) ) {
+            return;
+        }
+        ?>
         <div class="wrap">
-            <h1><?php _e('V7 Classic Editor Enabler Settings', 'v7-classic-editor-enabler'); ?></h1>
-            <form method="post" action="options.php">
+            <h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
+            <form method="post" action="<?php echo esc_url( admin_url( 'options.php' ) ); ?>">
                 <?php
-                settings_fields('v7_classic_editor_options');
-                do_settings_sections('v7_classic_editor_options');
-                submit_button();
+                settings_fields( 'v7_classic_editor_options' );
+                do_settings_sections( 'v7_classic_editor_options' );
+                submit_button( esc_html__( 'Save Settings', 'v7-classic-editor-enabler' ) );
                 ?>
             </form>
         </div>
-<?php
+        <?php
     }
 
     /**
@@ -186,7 +211,7 @@ class V7_Classic_Editor_Enabler_Admin
      */
     public function settings_section_callback()
     {
-        echo __('Select the post types for which you want to enable the Classic Editor.', 'v7-classic-editor-enabler');
+        echo '<p>' . esc_html__( 'Select the post types for which you want to enable the Classic Editor.', 'v7-classic-editor-enabler' ) . '</p>';
     }
 
     /**
@@ -196,8 +221,13 @@ class V7_Classic_Editor_Enabler_Admin
      */
     public function posts_checkbox_callback()
     {
-        $value = get_option('v7_classic_editor_posts', '1');
-        echo '<input type="checkbox" name="v7_classic_editor_posts" value="1" ' . checked(1, $value, false) . ' />';
+        $value = get_option( 'v7_classic_editor_posts', '1' );
+        ?>
+        <input type="checkbox" id="v7_classic_editor_posts" name="v7_classic_editor_posts" value="1" <?php checked( '1', $value ); ?> />
+        <label for="v7_classic_editor_posts">
+            <?php esc_html_e( 'Use Classic Editor for blog posts', 'v7-classic-editor-enabler' ); ?>
+        </label>
+        <?php
     }
 
     /**
@@ -207,7 +237,12 @@ class V7_Classic_Editor_Enabler_Admin
      */
     public function pages_checkbox_callback()
     {
-        $value = get_option('v7_classic_editor_pages', '1');
-        echo '<input type="checkbox" name="v7_classic_editor_pages" value="1" ' . checked(1, $value, false) . ' />';
+        $value = get_option( 'v7_classic_editor_pages', '1' );
+        ?>
+        <input type="checkbox" id="v7_classic_editor_pages" name="v7_classic_editor_pages" value="1" <?php checked( '1', $value ); ?> />
+        <label for="v7_classic_editor_pages">
+            <?php esc_html_e( 'Use Classic Editor for pages', 'v7-classic-editor-enabler' ); ?>
+        </label>
+        <?php
     }
 }

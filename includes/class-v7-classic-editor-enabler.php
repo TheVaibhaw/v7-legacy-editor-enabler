@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The file that contains the core plugin class
  *
@@ -8,6 +7,11 @@
  * @package    V7_Classic_Editor_Enabler
  * @subpackage V7_Classic_Editor_Enabler/includes
  */
+
+// Prevent direct file access.
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 /**
  * The core plugin class.

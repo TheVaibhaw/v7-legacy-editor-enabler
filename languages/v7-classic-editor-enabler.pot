@@ -1,0 +1,51 @@
+# V7 Classic Editor Enabler Translation Template
+# Copyright (C) 2025 Vaibhaw Kumar
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: V7 Classic Editor Enabler 1.0.0\n"
+"Report-Msgid-Bugs-To: https://vaibhawkumarparashar.in\n"
+"POT-Creation-Date: 2025-01-21 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Vaibhaw Kumar <imvaibhaw@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: admin/class-v7-classic-editor-enabler-admin.php
+msgid "V7 Classic Editor Enabler"
+msgstr ""
+
+#: admin/class-v7-classic-editor-enabler-admin.php
+msgid "V7 Classic Editor"
+msgstr ""
+
+#: admin/class-v7-classic-editor-enabler-admin.php
+msgid "Classic Editor Settings"
+msgstr ""
+
+#: admin/class-v7-classic-editor-enabler-admin.php
+msgid "Enable for Posts"
+msgstr ""
+
+#: admin/class-v7-classic-editor-enabler-admin.php
+msgid "Enable for Pages"
+msgstr ""
+
+#: admin/class-v7-classic-editor-enabler-admin.php
+msgid "Save Settings"
+msgstr ""
+
+#: admin/class-v7-classic-editor-enabler-admin.php
+msgid "Select the post types for which you want to enable the Classic Editor."
+msgstr ""
+
+#: admin/class-v7-classic-editor-enabler-admin.php
+msgid "Use Classic Editor for blog posts"
+msgstr ""
+
+#: admin/class-v7-classic-editor-enabler-admin.php
+msgid "Use Classic Editor for pages"
+msgstr ""

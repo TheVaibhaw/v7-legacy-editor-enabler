@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Register all actions and filters for the plugin
  *
@@ -9,6 +8,11 @@
  * @package    V7_Classic_Editor_Enabler
  * @subpackage V7_Classic_Editor_Enabler/includes
  */
+
+// Prevent direct file access.
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 /**
  * Register all actions and filters for the plugin.

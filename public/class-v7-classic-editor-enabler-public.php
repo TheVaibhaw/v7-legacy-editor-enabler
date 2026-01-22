@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The public-facing functionality of the plugin.
  *
@@ -9,6 +8,11 @@
  * @package    V7_Classic_Editor_Enabler
  * @subpackage V7_Classic_Editor_Enabler/public
  */
+
+// Prevent direct file access.
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
 
 /**
  * The public-facing functionality of the plugin.
