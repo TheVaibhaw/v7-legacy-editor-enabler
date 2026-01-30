@@ -1,7 +1,7 @@
 <?php
 /**
- * @package    V7_Classic_Editor_Enabler
- * @subpackage V7_Classic_Editor_Enabler/includes
+ * @package    V7_Legacy_Editor_Enabler
+ * @subpackage V7_Legacy_Editor_Enabler/includes
  * @since      1.0.0
  */
 
@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-class V7_Classic_Editor_Enabler_Loader {
+class V7_Legacy_Editor_Enabler_Loader {
 
     protected $actions;
     protected $filters;

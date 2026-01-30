@@ -1,21 +1,21 @@
-# V7 Classic Editor Enabler
+# V7 Legacy Editor Enabler
 
-[![WordPress Plugin Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/thevaibhaw/v7-classic-editor-enabler)
+[![WordPress Plugin Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/thevaibhaw/v7-legacy-editor-enabler)
 [![WordPress](https://img.shields.io/badge/WordPress-5.0%2B-blue.svg)](https://wordpress.org/)
 [![PHP](https://img.shields.io/badge/PHP-7.4%2B-purple.svg)](https://www.php.net/)
 [![License](https://img.shields.io/badge/license-GPL--2.0--or--later-green.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 
-**A lightweight, secure WordPress plugin that provides granular control to disable Gutenberg and enable Classic Editor per post type with automatic settings redirect.**
+**A lightweight, secure WordPress plugin that provides granular control to disable Gutenberg and enable the Legacy (TinyMCE) Editor per post type with automatic settings redirect.**
 
 ## 🎯 Description
 
-The V7 Classic Editor Enabler plugin provides fine-grained control over the WordPress editor experience. Since WordPress 5.0, Gutenberg (Block Editor) became the default editor, but many users prefer the familiar Classic Editor interface. This plugin allows you to disable Gutenberg and enable the Classic Editor selectively for different post types.
+The V7 Legacy Editor Enabler plugin provides fine-grained control over the WordPress editor experience. Since WordPress 5.0, Gutenberg (Block Editor) became the default editor, but many users prefer the familiar legacy TinyMCE editor interface. This plugin allows you to disable Gutenberg and enable the Legacy Editor selectively for different post types.
 
-## 🌟 Why Choose V7 Classic Editor Enabler?
+## 🌟 Why Choose V7 Legacy Editor Enabler?
 
-Unlike the official Classic Editor plugin which applies to all post types, **V7 Classic Editor Enabler** gives you **granular control**:
+**V7 Legacy Editor Enabler** gives you **granular control**:
 
-✅ **Per-Post-Type Control** - Choose Classic Editor for Posts only, or Pages only, or both  
+✅ **Per-Post-Type Control** - Choose Legacy Editor for Posts only, or Pages only, or both  
 ✅ **Automatic Configuration** - Auto-redirect to settings page after activation  
 ✅ **Hybrid Workflows** - Perfect for mixed content creation workflows  
 ✅ **Security First** - Built with WordPress security best practices  
@@ -24,7 +24,7 @@ Unlike the official Classic Editor plugin which applies to all post types, **V7 
 
 ## 🚀 Key Features
 
-* **Selective Enablement**: Choose which post types use Classic Editor (Posts, Pages, or both)
+* **Selective Enablement**: Choose which post types use Legacy Editor (Posts, Pages, or both)
 * **Automatic Redirect**: Redirects to settings page immediately after activation for easy configuration
 * **User-Friendly Settings**: Simple checkbox interface under Settings menu
 * **Post-Type Specific**: Control editor per post type independently
@@ -35,9 +35,9 @@ Unlike the official Classic Editor plugin which applies to all post types, **V7 
 
 ## 💡 Perfect For
 
-👨‍💼 **Content Creators**: Use Classic Editor for blog posts while keeping Gutenberg for landing pages  
-👨‍💻 **Developers**: Clients who prefer Classic Editor but want modern page building tools  
-🔄 **Hybrid Workflows**: Mix Classic and Gutenberg editors based on content type  
+👨‍💼 **Content Creators**: Use Legacy Editor for blog posts while keeping Gutenberg for landing pages  
+👨‍💻 **Developers**: Clients who prefer Legacy Editor but want modern page building tools  
+🔄 **Hybrid Workflows**: Mix Legacy and Gutenberg editors based on content type  
 ⚡ **Performance**: Minimal overhead with clean, efficient code  
 
 ## 📥 Installation
@@ -46,7 +46,7 @@ Unlike the official Classic Editor plugin which applies to all post types, **V7 
 
 1. Log in to your WordPress admin dashboard
 2. Navigate to **Plugins > Add New**
-3. Search for "V7 Classic Editor Enabler"
+3. Search for "V7 Legacy Editor Enabler"
 4. Click **Install Now**
 5. The plugin will automatically redirect you to the settings page for configuration
 
@@ -62,7 +62,7 @@ Unlike the official Classic Editor plugin which applies to all post types, **V7 
 ### FTP Installation
 
 1. Download and unzip the plugin files
-2. Upload the `v7-classic-editor-enabler` folder to `/wp-content/plugins/` directory
+2. Upload the `v7-legacy-editor-enabler` folder to `/wp-content/plugins/` directory
 3. Activate the plugin through the **Plugins** menu in WordPress
 4. You'll be automatically redirected to the settings page
 
@@ -71,25 +71,25 @@ Unlike the official Classic Editor plugin which applies to all post types, **V7 
 ### Initial Setup
 
 1. **Activate Plugin**: After activation, you're automatically taken to settings
-2. **Configure Settings**: Check the boxes for post types where you want Classic Editor
+2. **Configure Settings**: Check the boxes for post types where you want Legacy Editor
 3. **Save Changes**: Click "Save Settings" to apply your preferences
 
 ### Settings Configuration
 
-Navigate to **Settings > V7 Classic Editor** to access:
+Navigate to **Settings > V7 Legacy Editor** to access:
 
-- **Enable for Posts**: Check to use Classic Editor for blog posts
-- **Enable for Pages**: Check to use Classic Editor for static pages
+- **Enable for Posts**: Check to use Legacy Editor for blog posts
+- **Enable for Pages**: Check to use Legacy Editor for static pages
 
 ### Default Behavior
 
 - Both checkboxes are selected by default
-- Classic Editor is enabled for both Posts and Pages out of the box
+- Legacy Editor is enabled for both Posts and Pages out of the box
 - Uncheck boxes to allow Gutenberg for specific post types
 
 ## 🔒 Privacy & GDPR Compliance
 
-V7 Classic Editor Enabler is **fully GDPR compliant**:
+V7 Legacy Editor Enabler is **fully GDPR compliant**:
 
 * ✅ **No Data Collection**: This plugin does not collect, store, or transmit any personal data
 * ✅ **No Cookies**: No cookies are set by this plugin
@@ -101,11 +101,11 @@ V7 Classic Editor Enabler is **fully GDPR compliant**:
 
 ### How do I access the settings?
 
-After activation, you're automatically redirected to settings. You can also find it under **Settings > V7 Classic Editor** in your admin menu.
+After activation, you're automatically redirected to settings. You can also find it under **Settings > V7 Legacy Editor** in your admin menu.
 
 ### Can I use both editors on the same site?
 
-Yes! Enable Classic Editor for posts but keep Gutenberg for pages, or any combination that suits your workflow.
+Yes! Enable Legacy Editor for posts but keep Gutenberg for pages, or any combination that suits your workflow.
 
 ### Does this affect existing content?
 
@@ -115,13 +115,9 @@ No, existing posts and pages remain unchanged. The setting only affects the edit
 
 Simply uncheck the appropriate boxes in settings and save. Gutenberg will be restored for those post types.
 
-### Is the Classic Editor still supported?
-
-Yes, WordPress maintains the Classic Editor plugin. This plugin provides additional control over when it's used.
-
 ### Can I use this with page builders?
 
-Yes, this works with any page builder. The Classic Editor setting only affects the default WordPress editor.
+Yes, this works with any page builder. The Legacy Editor setting only affects the default WordPress editor.
 
 ### Does this work with custom post types?
 
@@ -135,10 +131,10 @@ Currently, the plugin supports Posts and Pages. Support for custom post types ma
 
 ## 📝 Changelog
 
-### 1.0.0 - 2026-01-22
+### 1.0.0 - 2026-01-30
 
 * **Initial Release**
-* Selective Classic Editor enablement for Posts and Pages
+* Selective Legacy Editor enablement for Posts and Pages
 * Automatic redirect to settings page after activation
 * Per-post-type granular control
 * Professional OOP code structure with security best practices
@@ -147,7 +143,7 @@ Currently, the plugin supports Posts and Pages. Support for custom post types ma
 * Multisite compatible
 * Proper uninstall cleanup
 * GDPR compliant - no data collection
-* Tested with WordPress 6.7 and PHP 7.4+
+* Tested with WordPress 6.9 and PHP 7.4+
 
 ## 🤝 Support
 
@@ -156,14 +152,14 @@ For support, bug reports, or feature requests:
 - **Author**: Vaibhaw Kumar
 - **Email**: imvaibhaw@gmail.com
 - **Website**: [vaibhawkumarparashar.in](https://vaibhawkumarparashar.in)
-- **GitHub**: [github.com/thevaibhaw/v7-classic-editor-enabler](https://github.com/thevaibhaw/v7-classic-editor-enabler)
+- **GitHub**: [github.com/thevaibhaw/v7-legacy-editor-enabler](https://github.com/thevaibhaw/v7-legacy-editor-enabler)
 
 ## 📜 License
 
 This plugin is licensed under the **GPL-2.0-or-later**.
 
 ```
-V7 Classic Editor Enabler
+V7 Legacy Editor Enabler
 Copyright (C) 2026, Vaibhaw Kumar
 
 This program is free software; you can redistribute it and/or modify
@@ -184,16 +180,16 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ## 👏 Credits
 
 - **Developer**: Vaibhaw Kumar
-- **Testing**: WordPress 6.7
+- **Testing**: WordPress 6.9
 - **Security Review**: Built with WordPress security best practices
 - **Code Standards**: Follows WordPress Coding Standards (WPCS)
 
 ## 🌐 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request on [GitHub](https://github.com/thevaibhaw/v7-classic-editor-enabler).
+Contributions are welcome! Please feel free to submit a Pull Request on [GitHub](https://github.com/thevaibhaw/v7-legacy-editor-enabler).
 
 ---
 
-**Thank you for using V7 Classic Editor Enabler!** ⭐
+**Thank you for using V7 Legacy Editor Enabler!** ⭐
 
 If you find this plugin helpful, please consider leaving a review on WordPress.org.

@@ -8,8 +8,8 @@
  * Note: Since WordPress 4.6, translations for plugins hosted on WordPress.org
  * are loaded automatically. This class is kept for compatibility and future use.
  *
- * @package    V7_Classic_Editor_Enabler
- * @subpackage V7_Classic_Editor_Enabler/includes
+ * @package    V7_Legacy_Editor_Enabler
+ * @subpackage V7_Legacy_Editor_Enabler/includes
  * @since      1.0.0
  */
 
@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-class V7_Classic_Editor_Enabler_i18n {
+class V7_Legacy_Editor_Enabler_i18n {
 
 	/**
 	 * Load the plugin text domain for translation.
@@ -45,7 +45,7 @@ class V7_Classic_Editor_Enabler_i18n {
 		// Uncomment the following lines if needed for development:
 		/*
 		load_plugin_textdomain(
-			'v7-classic-editor-enabler',
+			'v7-legacy-editor-enabler',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

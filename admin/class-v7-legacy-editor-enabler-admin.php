@@ -2,8 +2,8 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @package    V7_Classic_Editor_Enabler
- * @subpackage V7_Classic_Editor_Enabler/admin
+ * @package    V7_Legacy_Editor_Enabler
+ * @subpackage V7_Legacy_Editor_Enabler/admin
  * @since      1.0.0
  */
 
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-class V7_Classic_Editor_Enabler_Admin {
+class V7_Legacy_Editor_Enabler_Admin {
 
 	/**
 	 * The ID of this plugin.
@@ -56,7 +56,7 @@ class V7_Classic_Editor_Enabler_Admin {
 	 * @since 1.0.0
 	 */
 	public function enqueue_styles() {
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/v7-classic-editor-enabler-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/v7-legacy-editor-enabler-admin.css', array(), $this->version, 'all' );
 	}
 
 	/**
@@ -65,7 +65,7 @@ class V7_Classic_Editor_Enabler_Admin {
 	 * @since 1.0.0
 	 */
 	public function enqueue_scripts() {
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/v7-classic-editor-enabler-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/v7-legacy-editor-enabler-admin.js', array( 'jquery' ), $this->version, false );
 	}
 
 	/**
@@ -75,10 +75,10 @@ class V7_Classic_Editor_Enabler_Admin {
 	 */
 	public function add_settings_page() {
 		add_options_page(
-			esc_html__( 'V7 Classic Editor Enabler', 'v7-classic-editor-enabler' ),
-			esc_html__( 'V7 Classic Editor', 'v7-classic-editor-enabler' ),
+			esc_html__( 'V7 Legacy Editor Enabler', 'v7-legacy-editor-enabler' ),
+			esc_html__( 'V7 Legacy Editor', 'v7-legacy-editor-enabler' ),
 			'manage_options',
-			'v7-classic-editor-enabler',
+			'v7-legacy-editor-enabler',
 			array( $this, 'display_settings_page' )
 		);
 	}
@@ -92,16 +92,16 @@ class V7_Classic_Editor_Enabler_Admin {
 	 */
 	public function register_settings() {
 		// Handle activation redirect
-		if ( get_option( 'v7_classic_editor_redirect' ) && current_user_can( 'manage_options' ) ) {
-			delete_option( 'v7_classic_editor_redirect' );
-			wp_safe_redirect( esc_url( admin_url( 'options-general.php?page=v7-classic-editor-enabler' ) ) );
+		if ( get_option( 'v7_legacy_editor_redirect' ) && current_user_can( 'manage_options' ) ) {
+			delete_option( 'v7_legacy_editor_redirect' );
+			wp_safe_redirect( esc_url( admin_url( 'options-general.php?page=v7-legacy-editor-enabler' ) ) );
 			exit;
 		}
 
 		// Register settings
 		register_setting(
-			'v7_classic_editor_options',
-			'v7_classic_editor_posts',
+			'v7_legacy_editor_options',
+			'v7_legacy_editor_posts',
 			array(
 				'type'              => 'string',
 				'sanitize_callback' => 'sanitize_text_field',
@@ -110,8 +110,8 @@ class V7_Classic_Editor_Enabler_Admin {
 		);
 
 		register_setting(
-			'v7_classic_editor_options',
-			'v7_classic_editor_pages',
+			'v7_legacy_editor_options',
+			'v7_legacy_editor_pages',
 			array(
 				'type'              => 'string',
 				'sanitize_callback' => 'sanitize_text_field',
@@ -121,27 +121,27 @@ class V7_Classic_Editor_Enabler_Admin {
 
 		// Add settings section
 		add_settings_section(
-			'v7_classic_editor_section',
-			esc_html__( 'Classic Editor Settings', 'v7-classic-editor-enabler' ),
+			'v7_legacy_editor_section',
+			esc_html__( 'Legacy Editor Settings', 'v7-legacy-editor-enabler' ),
 			array( $this, 'settings_section_callback' ),
-			'v7_classic_editor_options'
+			'v7_legacy_editor_options'
 		);
 
 		// Add settings fields
 		add_settings_field(
-			'v7_classic_editor_posts',
-			esc_html__( 'Enable for Posts', 'v7-classic-editor-enabler' ),
+			'v7_legacy_editor_posts',
+			esc_html__( 'Enable for Posts', 'v7-legacy-editor-enabler' ),
 			array( $this, 'posts_checkbox_callback' ),
-			'v7_classic_editor_options',
-			'v7_classic_editor_section'
+			'v7_legacy_editor_options',
+			'v7_legacy_editor_section'
 		);
 
 		add_settings_field(
-			'v7_classic_editor_pages',
-			esc_html__( 'Enable for Pages', 'v7-classic-editor-enabler' ),
+			'v7_legacy_editor_pages',
+			esc_html__( 'Enable for Pages', 'v7-legacy-editor-enabler' ),
 			array( $this, 'pages_checkbox_callback' ),
-			'v7_classic_editor_options',
-			'v7_classic_editor_section'
+			'v7_legacy_editor_options',
+			'v7_legacy_editor_section'
 		);
 	}
 
@@ -159,9 +159,9 @@ class V7_Classic_Editor_Enabler_Admin {
 			<h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
 			<form method="post" action="<?php echo esc_url( admin_url( 'options.php' ) ); ?>">
 				<?php
-				settings_fields( 'v7_classic_editor_options' );
-				do_settings_sections( 'v7_classic_editor_options' );
-				submit_button( esc_html__( 'Save Settings', 'v7-classic-editor-enabler' ) );
+				settings_fields( 'v7_legacy_editor_options' );
+				do_settings_sections( 'v7_legacy_editor_options' );
+				submit_button( esc_html__( 'Save Settings', 'v7-legacy-editor-enabler' ) );
 				?>
 			</form>
 		</div>
@@ -174,7 +174,7 @@ class V7_Classic_Editor_Enabler_Admin {
 	 * @since 1.0.0
 	 */
 	public function settings_section_callback() {
-		echo '<p>' . esc_html__( 'Select the post types for which you want to enable the Classic Editor.', 'v7-classic-editor-enabler' ) . '</p>';
+		echo '<p>' . esc_html__( 'Select the post types for which you want to enable the Legacy (TinyMCE) Editor.', 'v7-legacy-editor-enabler' ) . '</p>';
 	}
 
 	/**
@@ -183,11 +183,11 @@ class V7_Classic_Editor_Enabler_Admin {
 	 * @since 1.0.0
 	 */
 	public function posts_checkbox_callback() {
-		$value = get_option( 'v7_classic_editor_posts', '1' );
+		$value = get_option( 'v7_legacy_editor_posts', '1' );
 		?>
-		<input type="checkbox" id="v7_classic_editor_posts" name="v7_classic_editor_posts" value="1" <?php checked( '1', $value ); ?> />
-		<label for="v7_classic_editor_posts">
-			<?php esc_html_e( 'Use Classic Editor for blog posts', 'v7-classic-editor-enabler' ); ?>
+		<input type="checkbox" id="v7_legacy_editor_posts" name="v7_legacy_editor_posts" value="1" <?php checked( '1', $value ); ?> />
+		<label for="v7_legacy_editor_posts">
+			<?php esc_html_e( 'Use Legacy Editor for blog posts', 'v7-legacy-editor-enabler' ); ?>
 		</label>
 		<?php
 	}
@@ -198,11 +198,11 @@ class V7_Classic_Editor_Enabler_Admin {
 	 * @since 1.0.0
 	 */
 	public function pages_checkbox_callback() {
-		$value = get_option( 'v7_classic_editor_pages', '1' );
+		$value = get_option( 'v7_legacy_editor_pages', '1' );
 		?>
-		<input type="checkbox" id="v7_classic_editor_pages" name="v7_classic_editor_pages" value="1" <?php checked( '1', $value ); ?> />
-		<label for="v7_classic_editor_pages">
-			<?php esc_html_e( 'Use Classic Editor for pages', 'v7-classic-editor-enabler' ); ?>
+		<input type="checkbox" id="v7_legacy_editor_pages" name="v7_legacy_editor_pages" value="1" <?php checked( '1', $value ); ?> />
+		<label for="v7_legacy_editor_pages">
+			<?php esc_html_e( 'Use Legacy Editor for pages', 'v7-legacy-editor-enabler' ); ?>
 		</label>
 		<?php
 	}
@@ -219,8 +219,8 @@ class V7_Classic_Editor_Enabler_Admin {
 	public function add_plugin_action_links( $links ) {
 		$settings_link = sprintf(
 			'<a href="%s">%s</a>',
-			esc_url( admin_url( 'options-general.php?page=v7-classic-editor-enabler' ) ),
-			esc_html__( 'Settings', 'v7-classic-editor-enabler' )
+			esc_url( admin_url( 'options-general.php?page=v7-legacy-editor-enabler' ) ),
+			esc_html__( 'Settings', 'v7-legacy-editor-enabler' )
 		);
 		array_unshift( $links, $settings_link );
 		return $links;

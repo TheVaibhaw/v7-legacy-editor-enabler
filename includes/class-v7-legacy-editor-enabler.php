@@ -5,8 +5,8 @@
  * This is used to define internationalization, admin-specific hooks, and
  * public-facing site hooks.
  *
- * @package    V7_Classic_Editor_Enabler
- * @subpackage V7_Classic_Editor_Enabler/includes
+ * @package    V7_Legacy_Editor_Enabler
+ * @subpackage V7_Legacy_Editor_Enabler/includes
  * @since      1.0.0
  */
 
@@ -25,14 +25,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-class V7_Classic_Editor_Enabler {
+class V7_Legacy_Editor_Enabler {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks.
 	 *
 	 * @since  1.0.0
 	 * @access protected
-	 * @var    V7_Classic_Editor_Enabler_Loader $loader Maintains and registers all hooks.
+	 * @var    V7_Legacy_Editor_Enabler_Loader $loader Maintains and registers all hooks.
 	 */
 	protected $loader;
 
@@ -64,12 +64,12 @@ class V7_Classic_Editor_Enabler {
 	 * @since 1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'V7_CLASSIC_EDITOR_ENABLER_VERSION' ) ) {
-			$this->version = V7_CLASSIC_EDITOR_ENABLER_VERSION;
+		if ( defined( 'V7_LEGACY_EDITOR_ENABLER_VERSION' ) ) {
+			$this->version = V7_LEGACY_EDITOR_ENABLER_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'v7-classic-editor-enabler';
+		$this->plugin_name = 'v7-legacy-editor-enabler';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -84,12 +84,12 @@ class V7_Classic_Editor_Enabler {
 	 * @access private
 	 */
 	private function load_dependencies() {
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-v7-classic-editor-enabler-loader.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-v7-classic-editor-enabler-i18n.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-v7-classic-editor-enabler-admin.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-v7-classic-editor-enabler-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-v7-legacy-editor-enabler-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-v7-legacy-editor-enabler-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-v7-legacy-editor-enabler-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-v7-legacy-editor-enabler-public.php';
 
-		$this->loader = new V7_Classic_Editor_Enabler_Loader();
+		$this->loader = new V7_Legacy_Editor_Enabler_Loader();
 	}
 
 	/**
@@ -99,7 +99,7 @@ class V7_Classic_Editor_Enabler {
 	 * @access private
 	 */
 	private function set_locale() {
-		$plugin_i18n = new V7_Classic_Editor_Enabler_i18n();
+		$plugin_i18n = new V7_Legacy_Editor_Enabler_i18n();
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 	}
 
@@ -110,13 +110,13 @@ class V7_Classic_Editor_Enabler {
 	 * @access private
 	 */
 	private function define_admin_hooks() {
-		$plugin_admin = new V7_Classic_Editor_Enabler_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new V7_Legacy_Editor_Enabler_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_settings_page' );
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'register_settings' );
-		$this->loader->add_filter( 'plugin_action_links_v7-classic-editor-enabler/v7-classic-editor-enabler.php', $plugin_admin, 'add_plugin_action_links' );
+		$this->loader->add_filter( 'plugin_action_links_v7-legacy-editor-enabler/v7-legacy-editor-enabler.php', $plugin_admin, 'add_plugin_action_links' );
 	}
 
 	/**
@@ -126,7 +126,7 @@ class V7_Classic_Editor_Enabler {
 	 * @access private
 	 */
 	private function define_public_hooks() {
-		$plugin_public = new V7_Classic_Editor_Enabler_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new V7_Legacy_Editor_Enabler_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_filter( 'use_block_editor_for_post_type', $plugin_public, 'disable_block_editor', 10, 2 );
 	}
@@ -154,7 +154,7 @@ class V7_Classic_Editor_Enabler {
 	 * The reference to the class that orchestrates the hooks.
 	 *
 	 * @since  1.0.0
-	 * @return V7_Classic_Editor_Enabler_Loader Orchestrates the hooks of the plugin.
+	 * @return V7_Legacy_Editor_Enabler_Loader Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

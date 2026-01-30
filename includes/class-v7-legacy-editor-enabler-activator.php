@@ -2,8 +2,8 @@
 /**
  * Fired during plugin activation.
  *
- * @package    V7_Classic_Editor_Enabler
- * @subpackage V7_Classic_Editor_Enabler/includes
+ * @package    V7_Legacy_Editor_Enabler
+ * @subpackage V7_Legacy_Editor_Enabler/includes
  * @since      1.0.0
  */
 
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-class V7_Classic_Editor_Enabler_Activator {
+class V7_Legacy_Editor_Enabler_Activator {
 
 	/**
 	 * Activate the plugin.
@@ -29,13 +29,13 @@ class V7_Classic_Editor_Enabler_Activator {
 	 * @since 1.0.0
 	 */
 	public static function activate() {
-		if ( false === get_option( 'v7_classic_editor_posts' ) ) {
-			add_option( 'v7_classic_editor_posts', '1' );
+		if ( false === get_option( 'v7_legacy_editor_posts' ) ) {
+			add_option( 'v7_legacy_editor_posts', '1' );
 		}
-		if ( false === get_option( 'v7_classic_editor_pages' ) ) {
-			add_option( 'v7_classic_editor_pages', '1' );
+		if ( false === get_option( 'v7_legacy_editor_pages' ) ) {
+			add_option( 'v7_legacy_editor_pages', '1' );
 		}
-		add_option( 'v7_classic_editor_redirect', '1' );
+		add_option( 'v7_legacy_editor_redirect', '1' );
 	}
 
 	/**

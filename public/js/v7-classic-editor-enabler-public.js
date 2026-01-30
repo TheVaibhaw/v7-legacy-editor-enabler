@@ -1,1 +1,0 @@
-// Public scripts for V7 Classic Editor Enabler
