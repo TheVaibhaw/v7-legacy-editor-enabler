@@ -4,47 +4,56 @@ Donate link: https://vaibhawkumarparashar.in/
 Tags: legacy-editor, gutenberg, block-editor, editor, wysiwyg
 Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 1.0.0
+Stable tag: 2.0.0
 Requires PHP: 7.4
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Granular control to disable Gutenberg and enable the Legacy (TinyMCE) Editor per post type with automatic settings redirect.
+The ultimate editor experience manager — granular control to disable Gutenberg per post type, user role, or individual post, with a premium settings dashboard.
 
 == Description ==
 
-The V7 Legacy Editor Enabler plugin provides fine-grained control over the WordPress editor experience. Since WordPress 5.0, Gutenberg (Block Editor) became the default editor, but many users prefer the familiar legacy TinyMCE editor interface. This plugin allows you to disable Gutenberg and enable the Legacy Editor selectively for different post types.
+The V7 Legacy Editor Enabler plugin provides fine-grained control over the WordPress editor experience. Since WordPress 5.0, Gutenberg (Block Editor) became the default editor, but many users prefer the familiar legacy TinyMCE editor interface. This plugin allows you to disable Gutenberg and enable the Legacy Editor selectively with multiple layers of control.
 
 = Why Choose V7 Legacy Editor Enabler? =
 
 V7 Legacy Editor Enabler gives you **granular control**:
-* Choose Legacy Editor for Posts only, or Pages only, or both
+* Choose Legacy Editor for any post type — Posts, Pages, and Custom Post Types
+* Per-user-role control — Different editors for Authors vs Administrators
+* Per-post override — Switch editors on individual posts
+* Gutenberg frontend asset cleaner for better performance
+* Editor usage statistics dashboard
+* Premium, modern settings UI with iOS-style toggle switches
 * Automatic redirect to settings page after activation for instant configuration
-* Per-post-type control - Perfect for mixed workflows
 * Clean, professional code built with WordPress security standards
-* Zero external dependencies - Lightweight and fast
+* Zero external dependencies — Lightweight and fast
 
 = Perfect For =
 
 * **Content Creators**: Use Legacy Editor for blog posts while keeping Gutenberg for landing pages
 * **Developers**: Clients who prefer Legacy Editor but want modern page building tools
-* **Hybrid Workflows**: Mix Legacy and Gutenberg editors based on content type
-* **Performance**: Minimal overhead with clean, efficient code
+* **Hybrid Workflows**: Mix Legacy and Gutenberg editors based on content type, user role, or individual post
+* **Performance**: Minimal overhead with clean, efficient code. Remove unused Gutenberg CSS from frontend
 
 = Key Features =
 
-* **Selective Enablement**: Choose which post types use Legacy Editor (Posts, Pages, or both)
+* **Custom Post Type Support**: Dynamically detects all registered post types with granular toggles
+* **Role-Based Control**: Force Legacy Editor for specific user roles (e.g., Authors, Contributors)
+* **Per-Post Override**: Meta box on each post to choose Legacy or Block editor individually
+* **Gutenberg Asset Cleaner**: Remove wp-block-library CSS/JS from frontend for Legacy posts (speed boost)
+* **Usage Statistics**: See how many posts use Legacy vs Block editor at a glance
+* **Premium Dashboard**: Modern card-based UI with iOS toggle switches, animated stats, and toast notifications
 * **Automatic Redirect**: Redirects to settings page immediately after activation for easy configuration
-* **User-Friendly Settings**: Simple checkbox interface under Settings menu
-* **Post-Type Specific**: Control editor per post type independently
 * **Professional Code**: Built with WordPress best practices and security standards
 * **Lightweight**: Minimal impact on site performance
 
 = How It Works =
 
-* **Posts**: Enable/disable Legacy Editor for blog posts
-* **Pages**: Enable/disable Legacy Editor for static pages
-* **Flexible Control**: Mix and match - use Legacy for posts but Gutenberg for pages, or vice versa
+* **Post Types**: Enable/disable Legacy Editor for any registered post type
+* **User Roles**: Force Legacy Editor for specific roles regardless of post type settings
+* **Per-Post**: Override any global setting on an individual post basis
+* **Priority Chain**: Per-post override → Role control → Post type setting
+* **Performance**: Optionally clean Gutenberg CSS/JS from frontend
 
 = Privacy & GDPR Compliance =
 
@@ -89,15 +98,27 @@ After activation, you're automatically redirected to settings. You can also find
 
 = Can I use both editors on the same site? =
 
-Yes! Enable Legacy Editor for posts but keep Gutenberg for pages, or any combination that suits your workflow.
+Yes! Enable Legacy Editor for posts but keep Gutenberg for pages, or any combination that suits your workflow. You can even set different editors per individual post.
+
+= Can different users use different editors? =
+
+Yes! With the Role-Based Control feature, you can force Legacy Editor for Authors while Administrators keep using Gutenberg.
+
+= Can I override the editor on a specific post? =
+
+Yes! Each post has an "Editor Preference" meta box in the sidebar where you can choose "Always Legacy", "Always Block", or "Use Global Setting".
 
 = Does this affect existing content? =
 
 No, existing posts and pages remain unchanged. The setting only affects the editor used for new content creation and editing.
 
+= What is the Gutenberg Asset Cleaner? =
+
+It removes the Gutenberg block CSS/JS files from your frontend pages for post types using the Legacy Editor. This improves page load speed since those assets are unnecessary.
+
 = What if I want to switch back? =
 
-Simply uncheck the appropriate boxes in settings and save. Gutenberg will be restored for those post types.
+Simply uncheck the appropriate toggles in settings and save. Gutenberg will be restored for those post types.
 
 = Can I use this with page builders? =
 
@@ -105,15 +126,33 @@ Yes, this works with any page builder. The Legacy Editor setting only affects th
 
 = Does this work with custom post types? =
 
-Currently, the plugin supports Posts and Pages. Support for custom post types may be added in future versions.
+Yes! Since v2.0.0, the plugin automatically detects all registered post types (including WooCommerce Products, Portfolio, etc.) and lets you toggle each one.
 
 == Screenshots ==
 
-1. Settings Page - Easy checkbox interface for configuring editor preferences
-2. Legacy Editor Interface - Familiar editing experience when enabled
-3. Admin Menu - Settings accessible under Settings menu
+1. Premium Settings Dashboard - Modern card-based UI with iOS-style toggle switches
+2. Post Type Control - Toggle Legacy Editor for any registered post type
+3. Role-Based Control - Set editors per user role
+4. Performance Settings - Gutenberg asset cleaner toggle
+5. Usage Statistics - Visual stats of editor usage across content
+6. Per-Post Editor Preference - Meta box for individual post overrides
 
 == Changelog ==
+
+= 2.0.0 - 2026-02-13 =
+* **Major Update — Editor Experience Manager**
+* NEW: Dynamic Custom Post Type support - all registered post types detected automatically
+* NEW: Per-User Role Control - force Legacy Editor for specific roles
+* NEW: Per-Post Editor Switcher - override global settings on individual posts
+* NEW: Gutenberg Frontend Asset Cleaner - remove unused CSS/JS for performance
+* NEW: Editor Usage Statistics dashboard with animated counters
+* NEW: Premium modern settings UI with iOS-style toggle switches
+* NEW: Card-based layout with gradient header and micro-animations
+* NEW: Toast notification on settings save
+* IMPROVED: 3-tier priority chain (per-post → role → post type)
+* IMPROVED: Admin CSS/JS only loads on plugin settings page
+* IMPROVED: v1.x to v2.x settings migration on activation
+* IMPROVED: Comprehensive uninstall cleanup including post meta
 
 = 1.0.0 - 2026-01-30 =
 * **Initial Release**
@@ -129,6 +168,9 @@ Currently, the plugin supports Posts and Pages. Support for custom post types ma
 * Tested with WordPress 6.9 and PHP 7.4+
 
 == Upgrade Notice ==
+
+= 2.0.0 =
+Major update with 6 new features: Custom Post Type support, Role-Based Control, Per-Post Switcher, Gutenberg Asset Cleaner, Usage Statistics, and a Premium Modern UI. Your v1.x settings are automatically migrated.
 
 = 1.0.0 =
 Initial release - no upgrade needed.

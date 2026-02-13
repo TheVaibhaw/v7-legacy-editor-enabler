@@ -1,9 +1,5 @@
 <?php
 /**
- * Uninstall Handler.
- *
- * Fired when the plugin is uninstalled.
- *
  * @package V7_Legacy_Editor_Enabler
  * @since   1.0.0
  */
@@ -12,20 +8,35 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
 
-// Delete options for single site.
-delete_option( 'v7_legacy_editor_posts' );
-delete_option( 'v7_legacy_editor_pages' );
+delete_option( 'v7_legacy_editor_post_types' );
+delete_option( 'v7_legacy_editor_roles' );
+delete_option( 'v7_legacy_editor_clean_assets' );
 delete_option( 'v7_legacy_editor_redirect' );
 
-// Delete options for multisite installations.
+delete_option( 'v7_legacy_editor_posts' );
+delete_option( 'v7_legacy_editor_pages' );
+
+global $wpdb;
+// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+$wpdb->delete( $wpdb->postmeta, array( 'meta_key' => '_v7_editor_preference' ) );
+
 // phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 if ( is_multisite() ) {
 	$v7_le_sites = get_sites();
 	foreach ( $v7_le_sites as $v7_le_site ) {
 		switch_to_blog( $v7_le_site->blog_id );
+
+		delete_option( 'v7_legacy_editor_post_types' );
+		delete_option( 'v7_legacy_editor_roles' );
+		delete_option( 'v7_legacy_editor_clean_assets' );
+		delete_option( 'v7_legacy_editor_redirect' );
+
 		delete_option( 'v7_legacy_editor_posts' );
 		delete_option( 'v7_legacy_editor_pages' );
-		delete_option( 'v7_legacy_editor_redirect' );
+
+		// phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+		$wpdb->delete( $wpdb->postmeta, array( 'meta_key' => '_v7_editor_preference' ) );
+
 		restore_current_blog();
 	}
 }
