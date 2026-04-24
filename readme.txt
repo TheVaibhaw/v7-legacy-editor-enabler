@@ -1,6 +1,6 @@
 === V7 Legacy Editor Enabler ===
 Contributors: thevaibhaw
-Donate link: https://vaibhawkumarparashar.in/
+Donate link: https://vaibhawkumar.in/
 Tags: legacy-editor, gutenberg, block-editor, editor, wysiwyg
 Requires at least: 5.0
 Tested up to: 6.9
@@ -9,7 +9,7 @@ Requires PHP: 7.4
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-The ultimate editor experience manager — granular control to disable Gutenberg per post type, user role, or individual post, with a premium settings dashboard.
+The ultimate editor experience manager â€” granular control to disable Gutenberg per post type, user role, or individual post, with a premium settings dashboard.
 
 == Description ==
 
@@ -18,15 +18,15 @@ The V7 Legacy Editor Enabler plugin provides fine-grained control over the WordP
 = Why Choose V7 Legacy Editor Enabler? =
 
 V7 Legacy Editor Enabler gives you **granular control**:
-* Choose Legacy Editor for any post type — Posts, Pages, and Custom Post Types
-* Per-user-role control — Different editors for Authors vs Administrators
-* Per-post override — Switch editors on individual posts
+* Choose Legacy Editor for any post type â€” Posts, Pages, and Custom Post Types
+* Per-user-role control â€” Different editors for Authors vs Administrators
+* Per-post override â€” Switch editors on individual posts
 * Gutenberg frontend asset cleaner for better performance
 * Editor usage statistics dashboard
 * Premium, modern settings UI with iOS-style toggle switches
 * Automatic redirect to settings page after activation for instant configuration
 * Clean, professional code built with WordPress security standards
-* Zero external dependencies — Lightweight and fast
+* Zero external dependencies â€” Lightweight and fast
 
 = Perfect For =
 
@@ -52,7 +52,7 @@ V7 Legacy Editor Enabler gives you **granular control**:
 * **Post Types**: Enable/disable Legacy Editor for any registered post type
 * **User Roles**: Force Legacy Editor for specific roles regardless of post type settings
 * **Per-Post**: Override any global setting on an individual post basis
-* **Priority Chain**: Per-post override → Role control → Post type setting
+* **Priority Chain**: Per-post override â†’ Role control â†’ Post type setting
 * **Performance**: Optionally clean Gutenberg CSS/JS from frontend
 
 = Privacy & GDPR Compliance =
@@ -140,7 +140,7 @@ Yes! Since v2.0.0, the plugin automatically detects all registered post types (i
 == Changelog ==
 
 = 2.0.0 - 2026-02-13 =
-* **Major Update — Editor Experience Manager**
+* **Major Update â€” Editor Experience Manager**
 * NEW: Dynamic Custom Post Type support - all registered post types detected automatically
 * NEW: Per-User Role Control - force Legacy Editor for specific roles
 * NEW: Per-Post Editor Switcher - override global settings on individual posts
@@ -149,7 +149,7 @@ Yes! Since v2.0.0, the plugin automatically detects all registered post types (i
 * NEW: Premium modern settings UI with iOS-style toggle switches
 * NEW: Card-based layout with gradient header and micro-animations
 * NEW: Toast notification on settings save
-* IMPROVED: 3-tier priority chain (per-post → role → post type)
+* IMPROVED: 3-tier priority chain (per-post â†’ role â†’ post type)
 * IMPROVED: Admin CSS/JS only loads on plugin settings page
 * IMPROVED: v1.x to v2.x settings migration on activation
 * IMPROVED: Comprehensive uninstall cleanup including post meta
@@ -188,7 +188,7 @@ For support, bug reports, or feature requests:
 
 * **Author:** Vaibhaw Kumar
 * **Email:** imvaibhaw@gmail.com
-* **Website:** [vaibhawkumarparashar.in](https://vaibhawkumarparashar.in)
+* **Website:** [vaibhawkumar.in](https://vaibhawkumar.in)
 
 = Contributing =
 

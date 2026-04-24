@@ -240,7 +240,7 @@ class V7_Legacy_Editor_Enabler_Admin {
 						<div class="v7-toggle-row">
 							<div class="v7-toggle-info">
 								<span class="v7-toggle-label"><?php echo esc_html( $type_obj->labels->name ); ?></span>
-								<span class="v7-toggle-desc"><?php echo esc_html( $type_obj->labels->singular_name ); ?> — <?php echo esc_html( $slug ); ?></span>
+								<span class="v7-toggle-desc"><?php echo esc_html( $type_obj->labels->singular_name ); ?> â€” <?php echo esc_html( $slug ); ?></span>
 							</div>
 							<label class="v7-switch">
 								<input type="checkbox" name="v7_legacy_editor_post_types[]" value="<?php echo esc_attr( $slug ); ?>" <?php checked( in_array( $slug, $enabled_types, true ) ); ?> />
@@ -335,8 +335,8 @@ class V7_Legacy_Editor_Enabler_Admin {
 				<?php
 				printf(
 					/* translators: %s: Author website link */
-					esc_html__( 'Made with ♥ by %s', 'v7-legacy-editor-enabler' ),
-					'<a href="https://vaibhawkumarparashar.in" target="_blank" rel="noopener noreferrer">Vaibhaw Kumar</a>'
+					esc_html__( 'Made with â™¥ by %s', 'v7-legacy-editor-enabler' ),
+					'<a href="https://vaibhawkumar.in" target="_blank" rel="noopener noreferrer">Vaibhaw Kumar</a>'
 				);
 				?>
 			</div>

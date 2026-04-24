@@ -7,22 +7,22 @@
 
 **A lightweight, secure WordPress plugin that provides granular control to disable Gutenberg and enable the Legacy (TinyMCE) Editor per post type with automatic settings redirect.**
 
-## 🎯 Description
+## ðŸŽ¯ Description
 
 The V7 Legacy Editor Enabler plugin provides fine-grained control over the WordPress editor experience. Since WordPress 5.0, Gutenberg (Block Editor) became the default editor, but many users prefer the familiar legacy TinyMCE editor interface. This plugin allows you to disable Gutenberg and enable the Legacy Editor selectively for different post types.
 
-## 🌟 Why Choose V7 Legacy Editor Enabler?
+## ðŸŒŸ Why Choose V7 Legacy Editor Enabler?
 
 **V7 Legacy Editor Enabler** gives you **granular control**:
 
-✅ **Per-Post-Type Control** - Choose Legacy Editor for Posts only, or Pages only, or both  
-✅ **Automatic Configuration** - Auto-redirect to settings page after activation  
-✅ **Hybrid Workflows** - Perfect for mixed content creation workflows  
-✅ **Security First** - Built with WordPress security best practices  
-✅ **Zero Dependencies** - Lightweight and fast, no external libraries  
-✅ **GDPR Compliant** - No data collection, no tracking, 100% private  
+âœ… **Per-Post-Type Control** - Choose Legacy Editor for Posts only, or Pages only, or both  
+âœ… **Automatic Configuration** - Auto-redirect to settings page after activation  
+âœ… **Hybrid Workflows** - Perfect for mixed content creation workflows  
+âœ… **Security First** - Built with WordPress security best practices  
+âœ… **Zero Dependencies** - Lightweight and fast, no external libraries  
+âœ… **GDPR Compliant** - No data collection, no tracking, 100% private  
 
-## 🚀 Key Features
+## ðŸš€ Key Features
 
 * **Selective Enablement**: Choose which post types use Legacy Editor (Posts, Pages, or both)
 * **Automatic Redirect**: Redirects to settings page immediately after activation for easy configuration
@@ -33,14 +33,14 @@ The V7 Legacy Editor Enabler plugin provides fine-grained control over the WordP
 * **Multisite Compatible**: Fully supports WordPress Multisite installations
 * **Translation Ready**: Fully internationalized and ready for translations
 
-## 💡 Perfect For
+## ðŸ’¡ Perfect For
 
-👨‍💼 **Content Creators**: Use Legacy Editor for blog posts while keeping Gutenberg for landing pages  
-👨‍💻 **Developers**: Clients who prefer Legacy Editor but want modern page building tools  
-🔄 **Hybrid Workflows**: Mix Legacy and Gutenberg editors based on content type  
-⚡ **Performance**: Minimal overhead with clean, efficient code  
+ðŸ‘¨â€ðŸ’¼ **Content Creators**: Use Legacy Editor for blog posts while keeping Gutenberg for landing pages  
+ðŸ‘¨â€ðŸ’» **Developers**: Clients who prefer Legacy Editor but want modern page building tools  
+ðŸ”„ **Hybrid Workflows**: Mix Legacy and Gutenberg editors based on content type  
+âš¡ **Performance**: Minimal overhead with clean, efficient code  
 
-## 📥 Installation
+## ðŸ“¥ Installation
 
 ### Automatic Installation (Recommended)
 
@@ -66,7 +66,7 @@ The V7 Legacy Editor Enabler plugin provides fine-grained control over the WordP
 3. Activate the plugin through the **Plugins** menu in WordPress
 4. You'll be automatically redirected to the settings page
 
-## ⚙️ Usage
+## âš™ï¸ Usage
 
 ### Initial Setup
 
@@ -87,17 +87,17 @@ Navigate to **Settings > V7 Legacy Editor** to access:
 - Legacy Editor is enabled for both Posts and Pages out of the box
 - Uncheck boxes to allow Gutenberg for specific post types
 
-## 🔒 Privacy & GDPR Compliance
+## ðŸ”’ Privacy & GDPR Compliance
 
 V7 Legacy Editor Enabler is **fully GDPR compliant**:
 
-* ✅ **No Data Collection**: This plugin does not collect, store, or transmit any personal data
-* ✅ **No Cookies**: No cookies are set by this plugin
-* ✅ **No External Services**: No external API calls or third-party services
-* ✅ **No Tracking**: No analytics or user tracking of any kind
-* ✅ **Local Storage Only**: All settings are stored locally in your WordPress database
+* âœ… **No Data Collection**: This plugin does not collect, store, or transmit any personal data
+* âœ… **No Cookies**: No cookies are set by this plugin
+* âœ… **No External Services**: No external API calls or third-party services
+* âœ… **No Tracking**: No analytics or user tracking of any kind
+* âœ… **Local Storage Only**: All settings are stored locally in your WordPress database
 
-## ❓ Frequently Asked Questions
+## â“ Frequently Asked Questions
 
 ### How do I access the settings?
 
@@ -123,13 +123,13 @@ Yes, this works with any page builder. The Legacy Editor setting only affects th
 
 Currently, the plugin supports Posts and Pages. Support for custom post types may be added in future versions.
 
-## 📋 Requirements
+## ðŸ“‹ Requirements
 
 - **WordPress**: 5.0 or higher
 - **PHP**: 7.4 or higher
 - **MySQL**: 5.0 or higher (WordPress requirement)
 
-## 📝 Changelog
+## ðŸ“ Changelog
 
 ### 1.0.0 - 2026-01-30
 
@@ -145,16 +145,16 @@ Currently, the plugin supports Posts and Pages. Support for custom post types ma
 * GDPR compliant - no data collection
 * Tested with WordPress 6.9 and PHP 7.4+
 
-## 🤝 Support
+## ðŸ¤ Support
 
 For support, bug reports, or feature requests:
 
 - **Author**: Vaibhaw Kumar
 - **Email**: imvaibhaw@gmail.com
-- **Website**: [vaibhawkumarparashar.in](https://vaibhawkumarparashar.in)
+- **Website**: [vaibhawkumar.in](https://vaibhawkumar.in)
 - **GitHub**: [github.com/TheVaibhaw/v7-legacy-editor-enabler](https://github.com/TheVaibhaw/v7-legacy-editor-enabler)
 
-## 📜 License
+## ðŸ“œ License
 
 This plugin is licensed under the **GPL-2.0-or-later**.
 
@@ -177,19 +177,19 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ```
 
-## 👏 Credits
+## ðŸ‘ Credits
 
 - **Developer**: Vaibhaw Kumar
 - **Testing**: WordPress 6.9
 - **Security Review**: Built with WordPress security best practices
 - **Code Standards**: Follows WordPress Coding Standards (WPCS)
 
-## 🌐 Contributing
+## ðŸŒ Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request on [GitHub](https://github.com/TheVaibhaw/v7-legacy-editor-enabler).
 
 ---
 
-**Thank you for using V7 Legacy Editor Enabler!** ⭐
+**Thank you for using V7 Legacy Editor Enabler!** â­
 
 If you find this plugin helpful, please consider leaving a review on WordPress.org.
