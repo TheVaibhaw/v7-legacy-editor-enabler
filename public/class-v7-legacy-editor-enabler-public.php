@@ -20,10 +20,9 @@ class V7_Legacy_Editor_Enabler_Public {
     }
 
     public function disable_block_editor( $use_block_editor, $post_type ) {
-        if ( 'post' === $post_type && '1' === get_option( 'v7_legacy_editor_posts', '1' ) ) {
-            return false;
-        }
-        if ( 'page' === $post_type && '1' === get_option( 'v7_legacy_editor_pages', '1' ) ) {
+        $option_name = 'v7_legacy_editor_' . $post_type;
+
+        if ( '1' === get_option( $option_name, '1' ) ) {
             return false;
         }
         return $use_block_editor;

@@ -84,6 +84,29 @@ class V7_Legacy_Editor_Enabler_Admin {
 	}
 
 	/**
+	 * Get all public post types.
+	 *
+	 * @since 1.0.0
+	 * @return array List of public post types.
+	 */
+	private function get_post_types() {
+		// phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+		$post_types = get_post_types( array( 'public' => true ), 'objects' );
+		// phpcs:enable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
+
+		$excluded = array( 'attachment' );
+		$types    = array();
+
+		foreach ( $post_types as $post_type ) {
+			if ( ! in_array( $post_type->name, $excluded, true ) ) {
+				$types[ $post_type->name ] = $post_type->label;
+			}
+		}
+
+		return $types;
+	}
+
+	/**
 	 * Register plugin settings.
 	 *
 	 * Handles activation redirect and registers all plugin settings.
@@ -98,26 +121,23 @@ class V7_Legacy_Editor_Enabler_Admin {
 			exit;
 		}
 
-		// Register settings
-		register_setting(
-			'v7_legacy_editor_options',
-			'v7_legacy_editor_posts',
-			array(
-				'type'              => 'string',
-				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => '1',
-			)
-		);
+		// Get all post types
+		$post_types = $this->get_post_types();
 
-		register_setting(
-			'v7_legacy_editor_options',
-			'v7_legacy_editor_pages',
-			array(
-				'type'              => 'string',
-				'sanitize_callback' => 'sanitize_text_field',
-				'default'           => '1',
-			)
-		);
+		// Register settings for each post type
+		foreach ( $post_types as $post_type => $label ) {
+			$option_name = 'v7_legacy_editor_' . $post_type;
+
+			register_setting(
+				'v7_legacy_editor_options',
+				$option_name,
+				array(
+					'type'              => 'string',
+					'sanitize_callback' => 'sanitize_text_field',
+					'default'           => '1',
+				)
+			);
+		}
 
 		// Add settings section
 		add_settings_section(
@@ -127,22 +147,19 @@ class V7_Legacy_Editor_Enabler_Admin {
 			'v7_legacy_editor_options'
 		);
 
-		// Add settings fields
-		add_settings_field(
-			'v7_legacy_editor_posts',
-			esc_html__( 'Enable for Posts', 'v7-legacy-editor-enabler' ),
-			array( $this, 'posts_checkbox_callback' ),
-			'v7_legacy_editor_options',
-			'v7_legacy_editor_section'
-		);
+		// Add settings fields for each post type
+		foreach ( $post_types as $post_type => $label ) {
+			$option_name = 'v7_legacy_editor_' . $post_type;
 
-		add_settings_field(
-			'v7_legacy_editor_pages',
-			esc_html__( 'Enable for Pages', 'v7-legacy-editor-enabler' ),
-			array( $this, 'pages_checkbox_callback' ),
-			'v7_legacy_editor_options',
-			'v7_legacy_editor_section'
-		);
+			add_settings_field(
+				$option_name,
+				esc_html( sprintf( esc_html__( 'Enable for %s', 'v7-legacy-editor-enabler' ), $label ) ),
+				array( $this, 'post_type_checkbox_callback' ),
+				'v7_legacy_editor_options',
+				'v7_legacy_editor_section',
+				array( 'post_type' => $post_type )
+			);
+		}
 	}
 
 	/**
@@ -178,32 +195,17 @@ class V7_Legacy_Editor_Enabler_Admin {
 	}
 
 	/**
-	 * Posts checkbox callback.
+	 * Post type checkbox callback.
 	 *
 	 * @since 1.0.0
+	 * @param array $args Field arguments containing 'post_type'.
 	 */
-	public function posts_checkbox_callback() {
-		$value = get_option( 'v7_legacy_editor_posts', '1' );
+	public function post_type_checkbox_callback( $args ) {
+		$post_type   = isset( $args['post_type'] ) ? $args['post_type'] : '';
+		$option_name = 'v7_legacy_editor_' . $post_type;
+		$value       = get_option( $option_name, '1' );
 		?>
-		<input type="checkbox" id="v7_legacy_editor_posts" name="v7_legacy_editor_posts" value="1" <?php checked( '1', $value ); ?> />
-		<label for="v7_legacy_editor_posts">
-			<?php esc_html_e( 'Use Legacy Editor for blog posts', 'v7-legacy-editor-enabler' ); ?>
-		</label>
-		<?php
-	}
-
-	/**
-	 * Pages checkbox callback.
-	 *
-	 * @since 1.0.0
-	 */
-	public function pages_checkbox_callback() {
-		$value = get_option( 'v7_legacy_editor_pages', '1' );
-		?>
-		<input type="checkbox" id="v7_legacy_editor_pages" name="v7_legacy_editor_pages" value="1" <?php checked( '1', $value ); ?> />
-		<label for="v7_legacy_editor_pages">
-			<?php esc_html_e( 'Use Legacy Editor for pages', 'v7-legacy-editor-enabler' ); ?>
-		</label>
+		<input type="checkbox" id="<?php echo esc_attr( $option_name ); ?>" name="<?php echo esc_attr( $option_name ); ?>" value="1" <?php checked( '1', $value ); ?> />
 		<?php
 	}
 
