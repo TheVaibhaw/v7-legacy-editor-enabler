@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name:       V7 Legacy Editor Enabler
+ * Plugin Name:       Disable Gutenberg - V7 Legacy Editor Enabler
  * Plugin URI:        https://github.com/TheVaibhaw/v7-legacy-editor-enabler
  * Description:       A lightweight plugin to disable Gutenberg block editor and enable the legacy TinyMCE editor for Posts and Pages with granular control.
- * Version:           1.3.0
+ * Version:           1.3.1
  * Author:            Vaibhaw Kumar
  * Author URI:        https://vaibhawkumar.in
  * License:           GPL-2.0-or-later
@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'V7_LEGACY_EDITOR_ENABLER_VERSION', '1.3.0' );
+define( 'V7_LEGACY_EDITOR_ENABLER_VERSION', '1.3.1' );
 
 // phpcs:disable WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedFunctionFound
 /**

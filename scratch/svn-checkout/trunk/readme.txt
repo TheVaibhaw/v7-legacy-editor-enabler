@@ -1,114 +1,133 @@
-=== V7 Legacy Editor Enabler ===
+=== Disable Gutenberg - V7 Legacy Editor Enabler ===
 Contributors: thevaibhaw
 Donate link: https://vaibhawkumarparashar.in/
-Tags: legacy-editor, gutenberg, block-editor, disable-gutenberg, classic-editor
+Tags: disable gutenberg, classic editor, legacy editor, disable block editor, tinymce
 Requires at least: 5.0
 Tested up to: 6.7
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 Requires PHP: 7.4
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Disable Gutenberg and enable the classic Legacy (TinyMCE) Editor per post type with granular control.
+Disable Gutenberg block editor and restore classic TinyMCE legacy editor per post type (Posts & Pages) with granular control.
 
 == Description ==
 
-The **V7 Legacy Editor Enabler** plugin provides lightweight, high-performance, and fine-grained control over your WordPress editing experience. Easily disable Gutenberg (Block Editor) and enable the classic Legacy TinyMCE Editor selectively for Posts, Pages, or custom post types.
+Looking for an easy way to **disable Gutenberg** and **restore the classic WordPress editor**? **Disable Gutenberg - V7 Legacy Editor Enabler** is the ultimate lightweight, high-performance plugin that gives you granular, per-post-type control over your WordPress editing experience.
 
-= Why Choose V7 Legacy Editor Enabler? =
+Whether you want to disable the block editor completely or keep Gutenberg for Pages while restoring the classic TinyMCE editor for Posts, V7 Legacy Editor Enabler makes it fast, seamless, and hassle-free.
 
-V7 Legacy Editor Enabler gives you full **granular control** without bloating your site:
-* **Per-Post-Type Control**: Choose Legacy Editor for Posts only, Pages only, or both.
-* **Instant Configuration**: Automatic redirect to settings page after activation.
-* **Lightweight & High-Speed**: Zero external assets, zero database bloat, and minimal memory footprint.
-* **Fully Compatible**: Tested and optimized for WordPress 6.7+.
-* **Clean Code**: Built according to WordPress coding standards and security best practices.
+### Why Choose Disable Gutenberg - V7 Legacy Editor Enabler?
 
-= Perfect For =
+* **Disable Gutenberg Per Post Type**: Easily choose whether to disable Gutenberg on blog Posts, static Pages, or both.
+* **Restore Classic TinyMCE Editor**: Get back the familiar, clean, distraction-free classic WordPress editor interface.
+* **Instant Settings Redirect**: Automatically redirects you to the settings screen upon activation so you can configure it instantly.
+* **Lightweight & High Performance**: 0% bloat, zero external scripts, zero speed impact on your site.
+* **100% Compatible with WordPress 6.7+**: Fully tested and optimized for the latest WordPress core releases.
+* **Page Builder Friendly**: Works seamlessly alongside popular page builders like Elementor, Beaver Builder, Divi, and WPBakery.
+* **GDPR & Privacy Compliant**: No tracking, no external API calls, and no cookies.
 
-* **Content Creators & Bloggers**: Enjoy the distraction-free, reliable Legacy TinyMCE Editor.
-* **Agencies & Developers**: Offer clients a familiar interface while keeping custom page builders intact.
-* **Hybrid Workflows**: Mix Gutenberg block editing and Classic editor seamlessly based on post types.
+---
 
-= Key Features =
+### Key Features
 
-* **Disable Gutenberg Block Editor**: Completely turn off Gutenberg where it's not needed.
-* **Enable Classic TinyMCE Editor**: Restore the proven, simple editor interface.
-* **Selective Post-Type Enablement**: Choose independently for Posts and Pages.
-* **Automatic Redirect**: Quick navigation right after activation.
-* **GDPR Compliant**: 100% privacy focused with zero data collection or tracking.
+* **Disable Block Editor (Gutenberg)**: Toggle block editor off with a single click.
+* **Enable Classic Editor**: Automatically fallback to TinyMCE for selected post types.
+* **Selective Control**: Mix and match—use Classic Editor for Posts and Gutenberg for Pages (or vice-versa).
+* **Automatic Redirect**: Direct access to settings under `Settings > V7 Legacy Editor` right after activation.
+* **Developer Friendly & Secure**: Built using WordPress OOP standards and strict security best practices.
 
-= Privacy & GDPR Compliance =
+---
 
-V7 Legacy Editor Enabler is fully GDPR compliant:
-* **No Data Collection**: Does not collect, store, or transmit any user or website data.
-* **No External Requests**: Operating 100% locally on your WordPress installation.
-* **No Cookies / Trackers**: Completely clean and private.
+### Who Is This Plugin For?
+
+1. **Bloggers & Content Writers**: Who prefer the straightforward simplicity of the classic TinyMCE editor.
+2. **Web Developers & Agencies**: Who want to provide clients with a clean editing interface while maintaining custom landing page tools.
+3. **Hybrid Workflows**: Sites that require block-based layout design for Pages, but simple text-focused editing for Posts.
+
+---
 
 == Installation ==
 
-= Automatic Installation (Recommended) =
+### Automatic Installation (Recommended)
 
 1. Log in to your WordPress admin dashboard.
-2. Navigate to **Plugins > Add New**.
-3. Search for "V7 Legacy Editor Enabler".
+2. Go to **Plugins > Add New**.
+3. Search for "**Disable Gutenberg V7 Legacy Editor**" or "**V7 Legacy Editor Enabler**".
 4. Click **Install Now** and then **Activate**.
-5. You will be automatically redirected to the plugin settings page.
+5. You will be automatically redirected to configure your settings.
 
-= Manual Installation =
+### Manual Installation
 
-1. Download the plugin ZIP file.
-2. Go to **Plugins > Add New > Upload Plugin** in WordPress.
-3. Choose the ZIP file and click **Install Now**.
-4. Activate the plugin.
+1. Download the `v7-legacy-editor-enabler.zip` file.
+2. Navigate to **Plugins > Add New > Upload Plugin** in your admin dashboard.
+3. Select the file and click **Install Now**.
+4. Click **Activate Plugin**.
+
+---
 
 == Frequently Asked Questions ==
 
-= How do I access the settings? =
+= How do I disable Gutenberg for Posts but keep it for Pages? =
 
-Go to **Settings > V7 Legacy Editor** in your WordPress admin menu.
+Go to **Settings > V7 Legacy Editor** in your WordPress dashboard. Check the box for **Enable for Posts** and uncheck **Enable for Pages**, then click **Save Settings**.
 
-= Can I keep Gutenberg for Pages and Legacy Editor for Posts? =
+= Does this plugin replace the official Classic Editor plugin? =
 
-Yes! You can enable or disable the Legacy Editor for Posts and Pages independently.
+Yes! V7 Legacy Editor Enabler gives you all the benefits of the classic editor with added per-post-type granular control and zero extra bloat.
 
-= Does this plugin collect any user data? =
+= Will disabling Gutenberg delete my existing content? =
 
-No. The plugin is completely privacy-focused, collects zero data, and makes no external API requests.
+No! Your content, images, and formatting remain 100% safe. Disabling Gutenberg only changes the editor interface used when editing or creating posts.
+
+= Does this plugin slow down my WordPress site? =
+
+Not at all. The plugin is ultra-lightweight, executes in milliseconds, and adds zero front-end overhead or external assets.
+
+= Is this plugin compatible with page builders? =
+
+Yes. It works seamlessly with Elementor, Divi, Beaver Builder, Oxygen, Bricks, and other major page builders.
+
+= Does the plugin collect any user data or track analytics? =
+
+No. We respect user privacy 100%. No data is collected, stored remotely, or transmitted.
+
+---
+
+== Screenshots ==
+
+1. **Settings Screen** - Granular per-post-type checkboxes for Posts and Pages.
+2. **Classic TinyMCE Editor** - Clean, familiar classic editing interface.
+3. **WordPress Admin Menu** - Easily accessible under Settings > V7 Legacy Editor.
+
+---
 
 == Changelog ==
 
-= 1.3.0 - 2026-08-31 =
-* Tested and confirmed fully compatible with WordPress 6.7.
-* Code maintenance & performance optimization.
-* Updated readme tags and descriptions for enhanced SEO.
+= 1.3.1 - 2026-08-31 =
+* Optimized plugin title, description, and keywords for search engine and WP plugin directory ranking.
+* Fully tested and confirmed compatible with WordPress 6.7+.
+* Enhanced FAQ section for user guidance and search indexing.
+
+= 1.3.0 =
+* WordPress 6.7 compatibility update.
+* Performance & translation tweaks.
 
 = 1.2.0 =
 * Minor enhancements and code formatting fixes.
 
 = 1.0.0 =
-* Initial Release.
+* Initial public release.
 
 == Upgrade Notice ==
 
-= 1.3.0 =
-Tested and compatible with WordPress 6.7. General performance and documentation updates.
+= 1.3.1 =
+Enhanced search keywords and WordPress 6.7 compatibility. Recommended update for all users.
 
-== Additional Info ==
+---
 
-= Requirements =
-
-* WordPress 5.0 or higher
-* PHP 7.4 or higher
-
-= Support =
-
-For support, bug reports, or feature requests:
+== Support & Contact ==
 
 * **Author:** Vaibhaw Kumar
-* **Email:** imvaibhaw@gmail.com
 * **Website:** [vaibhawkumarparashar.in](https://vaibhawkumarparashar.in)
-
-= Contributing =
-
-Contributions are welcome! Please feel free to submit a Pull Request on [GitHub](https://github.com/TheVaibhaw/v7-legacy-editor-enabler).
+* **GitHub Repository:** [TheVaibhaw/v7-legacy-editor-enabler](https://github.com/TheVaibhaw/v7-legacy-editor-enabler)
