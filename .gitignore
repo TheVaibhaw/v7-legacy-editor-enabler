@@ -1,2 +1,10 @@
+# SVN & Scratch files
+scratch/
 svn_dist/
 WORDPRESS_REPO_GUIDE.md
+
+# Build assets & notes (not for git repository)
+trending-plugin-ideas.txt
+logo.svg
+readme.txt
+assets/
